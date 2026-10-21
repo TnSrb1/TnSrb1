@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-labelledby="title" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="title">Victor Romanov — Solutions Architect, AI/agentic systems</title>
+<rect width="1200" height="280" rx="16" fill="#0f2340"/>
+<circle cx="1100" cy="140" r="84" fill="none" stroke="#c9d4e8" stroke-opacity="0.3" stroke-width="2"/>
+<circle cx="1100.0" cy="56.0" r="6" fill="#e8a93a"/><circle cx="1165.7" cy="87.6" r="6" fill="#e8a93a"/><circle cx="1181.9" cy="158.7" r="6" fill="#e8a93a"/><circle cx="1136.4" cy="215.7" r="6" fill="#e8a93a"/><circle cx="1063.6" cy="215.7" r="6" fill="#e8a93a"/><circle cx="1018.1" cy="158.7" r="6" fill="#e8a93a"/><circle cx="1034.3" cy="87.6" r="6" fill="#e8a93a"/>
+<text x="64" y="100" font-size="56" font-weight="700" fill="#f4f6fa">Victor Romanov</text>
+<text x="64" y="146" font-size="30" font-weight="600" fill="#f0b44c">Solutions Architect · AI/agentic systems</text>
+<text x="64" y="196" font-size="30" fill="#c9d4e8">I design AI systems and the agent workflow that builds them —</text>
+<text x="64" y="236" font-size="30" fill="#c9d4e8">every change proven by tests and live data.</text>
+</svg>

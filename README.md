@@ -1,50 +1,40 @@
-# Victor Romanov
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img alt="Victor Romanov, Solutions Architect · AI/agentic systems. I design AI systems and the agent workflow that builds them." src="assets/header-light.svg" width="100%">
+</picture>
 
-**Presales Solutions Architect: infrastructure, data center and enterprise AI**
-Founder & AI Solution Architect of [TenderSRB](https://app.nab.rs) · Remote worldwide, open to relocation
+I have spent 25+ years in IT. I built a bank's IT from scratch: core banking, card processing, two data centers and a 10-minute RTO. I ran IT for a billing platform with 4M+ accounts, and delivered 93 projects with my own integration consultancy. Today I design AI systems: agents that write code under hard guardrails, with every change proven by tests and live data before it ships.
+
+**Open to:** Solutions Architect (AI/agentic systems) · AI Solutions Consultant · Presales Architect for AI and infrastructure. Full-time, part-time or contract. Remote, open to relocation.
+
+## TenderSRB
+
+A service that collects public tenders from Serbia and its neighbours, matches them to each client's profile, and gives an AI go / no-go verdict before the client spends time on a bid.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img alt="TenderSRB figures as of 20 October 2026: 60 540 tenders processed, 28 745 notifications delivered, 751 merged PRs since 2 May 2026, 7 756 tests in the gate." src="assets/stats-light.svg" width="640">
+</picture>
+
+**Live:** [app.nab.rs](https://app.nab.rs) · **News:** [t.me/nabrs_news](https://t.me/nabrs_news) · **Public code:** [TnSrb1/nabrs](https://github.com/TnSrb1/nabrs)
+
+## How it is built
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/loop-dark.svg">
+  <img alt="Agent loop: brief, worker, hooks, gate, review, merge, prod check." src="assets/loop-light.svg" width="720">
+</picture>
+
+A coordinator agent and worker agents (Claude Code) do the engineering. The coordinator checks that a task has value in real data, writes the brief, runs the gate and verifies the live site; a second agent reviews each pull request. A human owns the decisions, the money and production data.
+
+Process and decisions: [TnSrb1/agent-ops](https://github.com/TnSrb1/agent-ops)
+
+## Recent work
+
+- **20 Oct 2026**: AI document analysis: extraction from .doc, .odt, .rtf and .zip files, then stepwise review.
+- **19 Oct**: Bosnia and Herzegovina source added: 1 987 tenders.
+- **17 Oct**: public showcase of nabrs; notifications when a tender changes.
+
+## Contact
 
 [Website](https://victorromanovsite.github.io) · [LinkedIn](https://www.linkedin.com/in/romanovvictor/) · [Telegram](https://t.me/victorromanov_it) · victor.romanov.inbox@gmail.com
-
-I design system architecture and drive it to a working product, and I lead the delivery, the vendors and the stakeholders around it.
-25+ years in IT: built a bank's IT from scratch (core banking, card processing, 2 data centers, 10-minute RTO),
-ran IT for a billing platform with 4M+ accounts, and delivered 93 projects with my own integration consultancy.
-Today I build production AI systems: AI agents that write code under hard guardrails,
-with every change proven by tests and live data before it ships.
-
-**Open to:** Presales Solutions Architect · Solutions Consultant / Engineer · Proposal and Bid Solution Architect. Full-time, part-time or contract.
-
-## TenderSRB: public tenders for the Western Balkans (case study)
-
-**Live:** [app.nab.rs](https://app.nab.rs) · **News:** [t.me/nabrs_news](https://t.me/nabrs_news) · **Bot:** [@nabrs_bot](https://t.me/nabrs_bot) · **Company:** [LinkedIn](https://www.linkedin.com/company/tendersrb/)
-
-A service that collects public tenders from Serbia and its neighbours, matches them to each client's profile,
-and gives an AI go / no-go verdict before the client spends time on a bid.
-
-As of 20 October 2026:
-
-| | |
-|---|---|
-| Tenders processed | 60,500+ |
-| Notifications delivered (Telegram, email) | 28,700+ |
-| Live data sources | 7 (Serbian and Bosnian national portals, TED, EU delegations, World Bank and others) |
-| Automated tests | 7,700+, all green before every merge |
-| Architecture decisions recorded | 34 ADRs |
-
-**What is inside**
-
-- **Ingest:** adapters for national portals, TED, EU delegations, the World Bank; rate limits, robots.txt checks, a quiet first pass so a new source never floods clients.
-- **Matching:** keywords in Latin and Cyrillic with one shared normaliser, a dictionary across Russian, English and Serbian, CPV codes, regions, budgets.
-- **Delivery:** an outbox worker for Telegram and email, per-channel language, daily caps that the client can see.
-- **AI layer:** go / no-go verdict, qualification checklist, deep analysis of tender documents; every paid model call has a tier limit, a gate before the call and a usage record after it.
-- **Multi-tenant security:** PostgreSQL row-level security (`FORCE`), the app runs under a role that cannot bypass it; personal data never goes to logs.
-- **Stack:** Python, FastAPI, SQLAlchemy 2, PostgreSQL, htmx, Docker, Caddy.
-
-**How it is built**
-
-One coordinator agent and worker agents (Claude Code) do the engineering. The coordinator never writes code:
-it checks that a task has value in real data, writes the brief, reviews the pull request with a second agent,
-runs the full test gate itself, merges and verifies the live site. A human (me) owns the decisions, the money and production data.
-
-The public code: **[TnSrb1/nabrs](https://github.com/TnSrb1/nabrs)**: a snapshot of the private repository, translated to English.
-
-More on the project: [TenderSRB case study](https://victorromanovsite.github.io/articles/tendersrb-case.html).
