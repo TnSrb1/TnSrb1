@@ -16,7 +16,7 @@ A service that collects public tenders from Serbia and its neighbours, matches t
   <img alt="TenderSRB figures as of October 2026: 60,000+ tenders processed, 25,000+ notifications delivered, 750+ merged PRs since 2 May 2026, about 8,000 tests in the gate." src="assets/stats-light.svg" width="640">
 </picture>
 
-**Live:** [app.nab.rs](https://app.nab.rs) · **News:** [t.me/nabrs_news](https://t.me/nabrs_news) · **Public code:** [TnSrb1/nabrs](https://github.com/TnSrb1/nabrs)
+**Live:** [nab.rs](https://nab.rs) · **News:** [t.me/nabrs_news](https://t.me/nabrs_news) · **Public code:** [TnSrb1/nabrs](https://github.com/TnSrb1/nabrs)
 
 ## How it is built
 
